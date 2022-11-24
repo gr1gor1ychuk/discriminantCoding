@@ -1,0 +1,40 @@
+using System;  
+public class Exercise11  
+{  
+    public static void Main()
+{
+   int a,b,c;
+   double d, x1,x2;
+   
+    Console.Write("\n\n");
+    Console.Write("Calculate root of Quadratic Equation :\n");
+    Console.Write("\n\n");
+ 
+    Console.Write("Enter a: ");
+    a = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Enter b: ");
+    b = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Enter c: ");
+    c = Convert.ToInt32(Console.ReadLine());
+
+   d=b*b-4*a*c;
+   if(d==0)
+   {
+     Console.Write("Both roots are equal.\n");
+     x1=-b/(2.0*a);
+     x2=x1;
+     Console.Write("x1= {0}\n",x1);
+     Console.Write("x2= {0}\n",x2);
+   }
+   else if(d>0)
+	{
+	   x1=(-b+Math.Sqrt(d))/(2*a);
+	   x2=(-b-Math.Sqrt(d))/(2*a);
+
+	   Console.Write("x1= {0}\n",x1);
+	   Console.Write("x2= {0}\n",x2);
+	}
+	else
+	    Console.Write("\nNo Solutions\n");
+}
+}
